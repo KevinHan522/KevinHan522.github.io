@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Projects - Kinect Security System</title>
+    <title>Projects - Lymphedema</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
 
 <body>
 
-        <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -45,6 +45,9 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
                         <a href="#">Projects</a>
                     </li>
                     <li>
@@ -57,14 +60,13 @@
         <!-- /.container -->
     </nav>
 
-
     <!-- Page Content -->
     <div class="container">
 
         <!-- Portfolio Item Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Kinect Security System             			</h1>
+                <h1 class="page-header">Kinect Lymphedema Detection             			</h1>
             </div>
         </div>
         <!-- /.row -->
@@ -79,25 +81,31 @@
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
     <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#myCarousel" data-slide-to="4"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="pics/Security1b.jpg" alt="Stolen pen">
+      <img src="pics/Lymphedema1b.png" alt="Lymphedema">
     </div>
 
     <div class="item">
-      <img src="pics/Security2b.jpg" alt="Lever moved">
+      <img src="pics/Lymphedema2b.png" alt="Lymphedema">
     </div>
 
     <div class="item">
-      <img src="pics/Security3b.jpg" alt="Facial recognition">
+      <img src="pics/Lymphedema3b.png" alt="Lymphedema">
     </div>
 
     <div class="item">
-      <img src="pics/Security4b.jpg" alt="Stolen water bottle">
+      <img src="pics/Lymphedema4b.png" alt="Lymphedema">
     </div>
+
+	<div class="item">
+      <img src="pics/Lymphedema5b.png" alt="Lymphedema">
+    </div>
+
   </div>
 
   <!-- Left and right controls -->
@@ -113,16 +121,17 @@
 </div>
 		<div class="col-md-4">
                 <h3>Project Description</h3>
-                <p>The goal of the project was to use the Microsoft Kinect as a security system of sorts.  When movement is detected via pixel comparisons, the camera will begin recording and saving snapshots while there is still movement on-screen.  If any faces are detected, the camera will take a screenshot and draw a box around the face in order to find the culprit.  Finally, after the culprit leaves, the program takes the before and after image and overlays them such that red tinted objects indicate objects in the before image not in the after and blue for the reverse.  Small changes are also boxed in red, and the program proved very reliable in detecting these.</p>
-			<p>This project was done the summer before my admission to Georgia Tech, Summer 2013, with the Georgia Tech Research Institute Advanced Concepts Lab with Matthew Habib.  It was coded entirely by myself in C++ using the Kinect v1 SDK.  At the end of the internship, I presented the project at a poster session where participants were asked to attempt to steal candy from the Kinect's view without it noticing. </p>
+                <p>The Kinect Lymphedema Detection project is a program with the goal of being able to detect and track lymphdema progress in patients.  Lymphedema is a serious condition where the lymph nodes are unable to drain properly and thus limbs become inflated in serious cases.  This program asks the patient to align themselves in front of the Kinect by placing red boxes on joints that are too far behind and then proceeds to measure the arm volume of both arms by first segmenting it from the other pixels via color segmentation and depth differences and then summing depths over all pixels in the arm.  It then compares it with the other arm.</p>
+			<p>I worked on this project as the programming head for a full year from August 2014 to August 2015 at the Georgia Tech Laboratory of Lymphatic Biology and Bioengineering (LLBB) under Timothy Kassis and Mike Weiler who acted as clients.  It was coded entirely in C# with the Microsoft Kinect v2 and Kinect SDK.  Before working on the actual product, I was asked to demonstrate the feasibility of the idea by measuring the volume of a basketball, followed by a model arm, a full model, and eventually myself and others around the lab.  We went on to various clients such as Emory and were able to generate interest in this product as it is easy to use and cheaper than the current alternatives.  The prototype I made launched the idea into fruition and continues development with other interns as part of the startup LymphaTech.  </p>
 
                 <h3>Features</h3>
                 <ul>
-                    <li>Motion detection</li>
-                    <li>Facial recognition</li>
-                    <li>Functional in low lighting</li>
+                    <li>Color (and depth) segmentation</li>
+                    <li>Volume Estimation</li>
+                    <li>Multithreaded processing</li>
+			    <li>Noise reduction by smoothing</li>
                 </ul>
-			<a href="https://github.com/KevinHan522/Security">Source Code</a>
+			<a href="https://github.com/KevinHan522/Kinect-Lymphedema-Detection">Source Code</a>
             </div>
             
 
